@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - Andhra Pradesh Tourism</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Andhra<span>Tourism</span></h1>
+                </a>
+            </div>
+            
+            <div class="toggle-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="book.html" class="active">Book Now</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" id="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <div class="page-banner">
+        <div class="container">
+            <h1>Book Your Trip</h1>
+            <p>Start your Andhra Pradesh adventure today</p>
+        </div>
+    </div>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="booking-sidebar">
+                    <div class="booking-info">
+                        <h3>Why Book With Us?</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Best Price Guarantee</li>
+                            <li><i class="fas fa-check-circle"></i> No Hidden Fees</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 Customer Support</li>
+                            <li><i class="fas fa-check-circle"></i> Secure Payment Options</li>
+                            <li><i class="fas fa-check-circle"></i> Free Cancellation Options</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="booking-help">
+                        <h3>Need Help?</h3>
+                        <p>Our travel experts are ready to assist you with your booking.</p>
+                        <div class="help-contact">
+                            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                            <p><i class="fas fa-envelope"></i> bookings@andhratourism.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-form-container">
+                    <div class="form-header">
+                        <h2>Book Your Trip</h2>
+                        <p>Fill out the form below to start your journey</p>
+                    </div>
+                    
+                    <form id="booking-form">
+                        <div class="form-section">
+                            <h3>Personal Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="full-name">Full Name</label>
+                                    <input type="text" id="full-name" name="full-name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="nationality">Nationality</label>
+                                    <select id="nationality" name="nationality" required>
+                                        <option value="" selected disabled>Select country</option>
+                                        <option value="India">India</option>
+                                        <option value="USA">United States</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="France">France</option>
+                                        <option value="Japan">Japan</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Travel Details</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="destination">Destination</label>
+                                    <select id="destination" name="destination" required>
+                                        <option value="" selected disabled>Select destination</option>
+                                        <option value="Tirumala">Tirumala Temple</option>
+                                        <option value="Srisailam">Srisailam Temple</option>
+                                        <option value="KanakaDurga">Kanaka Durga Temple</option>
+                                        <option value="Gunadala">Gunadala Church</option>
+                                        <option value="HolyTrinity">Holy Trinity Church</option>
+                                        <option value="AmeenPeer">Ameen Peer Dargah</option>
+                                        <option value="BarahShaheed">Barah Shaheed Dargah</option>
+                                        <option value="Araku">Araku Valley</option>
+                                        <option value="Lambasingi">Lambasingi</option>
+                                        <option value="Gandikota">Gandikota</option>
+                                        <option value="BelumCaves">Belum Caves</option>
+                                        <option value="Kakinada">Kakinada Beach</option>
+                                        <option value="Vijayawada">Vijayawada</option>
+                                        <option value="Visakhapatnam">Visakhapatnam</option>
+                                        <option value="Other">Other (specify in notes)</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="trip-type">Trip Type</label>
+                                    <select id="trip-type" name="trip-type" required>
+                                        <option value="" selected disabled>Select trip type</option>
+                                        <option value="Spiritual">Spiritual Journey</option>
+                                        <option value="Adventure">Adventure Trip</option>
+                                        <option value="Beach">Beach Vacation</option>
+                                        <option value="City">City Tour</option>
+                                        <option value="Culture">Cultural Experience</option>
+                                        <option value="Family">Family Vacation</option>
+                                        <option value="Photography">Photography Tour</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="departure-date">Arrival Date</label>
+                                    <input type="date" id="departure-date" name="departure-date" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="return-date">Departure Date</label>
+                                    <input type="date" id="return-date" name="return-date" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="adults">Number of Adults</label>
+                                    <input type="number" id="adults" name="adults" min="1" value="1" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="children">Number of Children</label>
+                                    <input type="number" id="children" name="children" min="0" value="0">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Accommodation & Preferences</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="accommodation">Accommodation Type</label>
+                                    <select id="accommodation" name="accommodation" required>
+                                        <option value="" selected disabled>Select accommodation</option>
+                                        <option value="Hotel">Hotel</option>
+                                        <option value="Resort">Resort</option>
+                                        <option value="Apartment">Guest House</option>
+                                        <option value="Hostel">Hostel</option>
+                                        <option value="Boutique">Heritage Hotel</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="room-type">Room Type</label>
+                                    <select id="room-type" name="room-type" required>
+                                        <option value="" selected disabled>Select room type</option>
+                                        <option value="Single">Single Room</option>
+                                        <option value="Double">Double Room</option>
+                                        <option value="Twin">Twin Room</option>
+                                        <option value="Suite">Suite</option>
+                                        <option value="Family">Family Room</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="special-requests">Special Requests</label>
+                                <textarea id="special-requests" name="special-requests" rows="4" placeholder="Any special requirements or preferences?"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section terms-section">
+                            <div class="form-group form-checkbox">
+                                <input type="checkbox" id="terms-agree" name="terms-agree" required>
+                                <label for="terms-agree">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Book Now</button>
+                            <button type="button" class="btn btn-secondary" id="clear-form">Clear Form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="modal" id="booking-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            
+            <div class="booking-confirmation">
+                <div class="confirmation-header">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Booking Confirmed!</h2>
+                    <p>Your trip has been successfully booked. A confirmation has been sent to your email.</p>
+                </div>
+                
+                <div class="booking-details" id="booking-details">
+                    <!-- Will be filled with JavaScript -->
+                </div>
+                
+                <div class="booking-actions">
+                    <button id="download-pdf" class="btn btn-primary">Download Ticket</button>
+                    <a href="index.html" class="btn btn-secondary">Return to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2>Andhra<span>Tourism</span></h2>
+                    </div>
+                    <p>Discover the rich cultural heritage, spiritual temples, and beautiful landscapes of Andhra Pradesh with our expertly crafted travel experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="book.html">Book Now</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Popular Destinations</h3>
+                    <ul>
+                        <li><a href="#">Tirumala Temple</a></li>
+                        <li><a href="#">Araku Valley</a></li>
+                        <li><a href="#">Gandikota</a></li>
+                        <li><a href="#">Belum Caves</a></li>
+                        <li><a href="#">Visakhapatnam</a></li>
+                        <li><a href="#">Srisailam</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tourism Street, Vijayawada 520001</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@andhratourism.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Andhra Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login/Signup Modal -->
+    <div class="modal" id="auth-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="signup">Sign Up</button>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active" id="login-pane">
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-full">Login</button>
+                        
+                        <div class="form-footer">
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="tab-pane" id="signup-pane">
+                    <form id="signup-form">
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                            <input type="password" id="signup-confirm-password" required>
+                        </div>
+                        
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-full">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scroll-top-btn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

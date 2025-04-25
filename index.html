@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andhra Pradesh Tourism - Discover Amazing Destinations</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Andhra<span>Tourism</span></h1>
+                </a>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search destinations...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="toggle-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="book.html">Book Now</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" id="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Andhra Pradesh</h1>
+            <p>Experience the rich culture, divine temples, and scenic beauty</p>
+            <a href="book.html" class="btn">Book Now</a>
+        </div>
+        
+        <div class="slider-container">
+            <div class="slides">
+                <img src="images/tirumala.jpg" alt="Tirumala Temple">
+                <img src="images/araku.jpg" alt="Araku Valley">
+                <img src="images/Visakhapatnam.jpg" alt="Visakhapatnam Beach">
+                <img src="images/Gandikota.jpg" alt="Gandikota Canyon">
+                <img src="images/Belum.jpg" alt="Belum Caves">
+            </div>
+            
+            <div class="slider-controls">
+                <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                </div>
+                <button class="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Visit Andhra Pradesh</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <div class="icon">
+                        <i class="fas fa-gopuram"></i>
+                    </div>
+                    <h3>Divine Temples</h3>
+                    <p>Experience spiritual bliss at Andhra Pradesh's iconic temples, including Tirumala, Srisailam, and Kanaka Durga.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Scenic Landscapes</h3>
+                    <p>Discover breathtaking natural beauty from Araku Valley's coffee plantations to Gandikota's majestic canyons.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Authentic Cuisine</h3>
+                    <p>Savor the famous spicy Andhra cuisine, seafood delicacies, and traditional sweets unique to the region.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h3>Beautiful Beaches</h3>
+                    <p>Relax at pristine beaches along the Bay of Bengal coastline, perfect for sunbathing, water sports, and peaceful retreats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore Andhra Pradesh</h2>
+                <div class="underline"></div>
+                <p class="section-subtitle">Discover the diversity of attractions across the state</p>
+            </div>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Places</button>
+                <button class="filter-btn" data-filter="temples">Temples</button>
+                <button class="filter-btn" data-filter="churches">Churches</button>
+                <button class="filter-btn" data-filter="mosques">Mosques & Dargahs</button>
+                <button class="filter-btn" data-filter="tourist">Tourist Places</button>
+            </div>
+            
+            <div class="gallery">
+                <div class="gallery-item" data-category="temples">
+                    <img src="images/tirumala.jpg" alt="Tirumala Temple">
+                    <div class="gallery-overlay">
+                        <h3>Tirumala Temple</h3>
+                        <p>The sacred abode of Lord Venkateswara</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="temples">
+                    <img src="images/Srisailam.jpg" alt="Srisailam Temple">
+                    <div class="gallery-overlay">
+                        <h3>Srisailam Temple</h3>
+                        <p>Ancient temple dedicated to Lord Mallikarjuna</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="churches">
+                    <img src="images/Gunadala.jpg" alt="Gunadala Church">
+                    <div class="gallery-overlay">
+                        <h3>Gunadala Church</h3>
+                        <p>Historic church in Vijayawada</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="tourist">
+                    <img src="images/araku.jpg" alt="Araku Valley">
+                    <div class="gallery-overlay">
+                        <h3>Araku Valley</h3>
+                        <p>Scenic hill station with coffee plantations</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="tourist">
+                    <img src="images/Gandikota.jpg" alt="Gandikota Canyon">
+                    <div class="gallery-overlay">
+                        <h3>Gandikota Canyon</h3>
+                        <p>The Grand Canyon of India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="destinations">
+        <div class="container">
+            <div class="section-title">
+                <h2>Popular Destinations</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="destination-grid search-items">
+                <div class="destination-card" data-tags="temple spiritual religious tirumala divine">
+                    <div class="image">
+                        <img src="images/tirumala.jpg" alt="Tirumala Temple">
+                    </div>
+                    <div class="content">
+                        <h3>Tirumala Temple</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                        <p>One of the most visited and sacred temples dedicated to Lord Venkateswara</p>
+                        <div class="price">From ₹5,999</div>
+                        <a href="book.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="destination-card" data-tags="valley nature beauty araku coffee tribal">
+                    <div class="image">
+                        <img src="images/araku.jpg" alt="Araku Valley">
+                    </div>
+                    <div class="content">
+                        <h3>Araku Valley</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7</span>
+                        </div>
+                        <p>A scenic hill station known for coffee plantations and tribal culture</p>
+                        <div class="price">From ₹7,499</div>
+                        <a href="book.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="destination-card" data-tags="canyon historical gandikota fort river adventure">
+                    <div class="image">
+                        <img src="images/gandikota.jpg" alt="Gandikota">
+                    </div>
+                    <div class="content">
+                        <h3>Gandikota</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.2</span>
+                        </div>
+                        <p>The 'Grand Canyon of India' with a historic fort and breathtaking gorge</p>
+                        <div class="price">From ₹6,499</div>
+                        <a href="book.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="destination-card" data-tags="caves natural belum underground exploration adventure">
+                    <div class="image">
+                        <img src="images/Belum.jpg" alt="Belum Caves">
+                    </div>
+                    <div class="content">
+                        <h3>Belum Caves</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                        <p>The second largest underground cave system in the Indian subcontinent</p>
+                        <div class="price">From ₹5,999</div>
+                        <a href="book.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore Andhra Pradesh</h2>
+                <div class="underline"></div>
+                <p class="section-subtitle">Discover the diversity of attractions across the state</p>
+            </div>
+            
+            <div class="gallery search-items">
+                <div class="box" data-tags="temple tirumala religious">
+                    <img src="images/tirumala.jpg" alt="Tirumala Temple">
+                    <div class="overlay">
+                        <h3>Tirumala Temple</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="temple srisailam religious">
+                    <img src="images/Srisailam.jpg" alt="Srisailam Temple">
+                    <div class="overlay">
+                        <h3>Srisailam Temple</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="temple kanaka durga religious">
+                    <img src="images/Kanaka_Durga_Temple.jpg" alt="Kanaka Durga Temple">
+                    <div class="overlay">
+                        <h3>Kanaka Durga Temple</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="church gunadala christian">
+                    <img src="images/Gunadala.jpg" alt="Gunadala Church">
+                    <div class="overlay">
+                        <h3>Gunadala Church</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="church trinity christian">
+                    <img src="images/Trinity.jpg" alt="Holy Trinity Church">
+                    <div class="overlay">
+                        <h3>Holy Trinity Church</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="mosque dargah ameen muslim">
+                    <img src="images/darga.jpeg" alt="Ameen Peer Dargah">
+                    <div class="overlay">
+                        <h3>Ameen Peer Dargah</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="mosque dargah barah shaheed muslim">
+                    <img src="images/Barah.jpg" alt="Barah Shaheed Dargah">
+                    <div class="overlay">
+                        <h3>Barah Shaheed Dargah</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="valley araku nature">
+                    <img src="images/araku.jpg" alt="Araku Valley">
+                    <div class="overlay">
+                        <h3>Araku Valley</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="hill lambasingi winter nature">
+                    <img src="images/Lambasingi.jpg" alt="Lambasingi">
+                    <div class="overlay">
+                        <h3>Lambasingi</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="canyon gandikota historical">
+                    <img src="images/GANDIKOTAa.jpg" alt="Gandikota">
+                    <div class="overlay">
+                        <h3>Gandikota</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="caves belum underground">
+                    <img src="images/Belum.jpg" alt="Belum Caves">
+                    <div class="overlay">
+                        <h3>Belum Caves</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="beach kakinada sea">
+                    <img src="images/Kakinada.jpg" alt=" Kakinada Beach">
+                    <div class="overlay">
+                        <h3>Kakinada Beach</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="city vijayawada urban">
+                    <img src="images/vijayawada.jpeg" alt="Vijayawada">
+                    <div class="overlay">
+                        <h3>Vijayawada</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="city vizag visakhapatnam urban beach">
+                    <img src="images/Visakhapatnam.jpg" alt="Visakhapatnam">
+                    <div class="overlay">
+                        <h3>Visakhapatnam</h3>
+                    </div>
+                </div>
+                <div class="box" data-tags="landscape culture andhra">
+                    <img src="images/ap land scape.jpeg" alt="Andhra Pradesh Landscape">
+                    <div class="overlay">
+                        <h3>AP Scenic Beauty</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Travelers Say</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <div class="profile">
+                        <img src="images/person1.jpeg" alt="Customer">
+                        <h4>Suresh Kumar</h4>
+                        <p class="location">Tirumala Trip</p>
+                    </div>
+                    <p class="quote">"Our pilgrimage to Tirumala Temple was seamless thanks to Andhra Tourism. The accommodations were comfortable, and the guide's knowledge enhanced our spiritual experience."</p>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="profile">
+                        <img src="images/person3.jpeg" alt="Customer">
+                        <h4>Priya Sharma</h4>
+                        <p class="location">Araku Valley Trip</p>
+                    </div>
+                    <p class="quote">"Araku Valley exceeded our expectations! The coffee plantations, tribal village tours, and the scenic train journey were highlights. Our family had an unforgettable experience."</p>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="profile">
+                        <img src="images/person2.jpeg" alt="Customer">
+                        <h4>Mohan Rao</h4>
+                        <p class="location">Vizag Trip</p>
+                    </div>
+                    <p class="quote">"From the submarine museum to the beautiful beaches, our Vizag trip was perfectly organized. The local cuisine recommendations were outstanding, and the tour guides were knowledgeable."</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get special offers and travel inspiration for Andhra Pradesh delivered to your inbox</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2>Andhra<span>Tourism</span></h2>
+                    </div>
+                    <p>Discover the rich cultural heritage, spiritual temples, and beautiful landscapes of Andhra Pradesh with our expertly crafted travel experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="book.html">Book Now</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Popular Destinations</h3>
+                    <ul>
+                        <li><a href="#">Tirumala Temple</a></li>
+                        <li><a href="#">Araku Valley</a></li>
+                        <li><a href="#">Gandikota</a></li>
+                        <li><a href="#">Belum Caves</a></li>
+                        <li><a href="#">Visakhapatnam</a></li>
+                        <li><a href="#">Srisailam</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tourism Street, Vijayawada 520001</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@andhratourism.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Andhra Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login/Signup Modal -->
+    <div class="modal" id="auth-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="signup">Sign Up</button>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active" id="login-pane">
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-full">Login</button>
+                        
+                        <div class="form-footer">
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="tab-pane" id="signup-pane">
+                    <form id="signup-form">
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                            <input type="password" id="signup-confirm-password" required>
+                        </div>
+                        
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-full">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div class="lightbox" id="image-lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-image" src="" alt="Enlarged Image">
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scroll-top-btn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Gallery Lightbox -->
+    <div class="lightbox" id="gallery-lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-image" src="" alt="">
+        <div class="lightbox-caption">
+            <h3></h3>
+            <p></p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="script.js"></script>
+</body>
+</html>

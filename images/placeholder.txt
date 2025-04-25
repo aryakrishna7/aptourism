@@ -1,0 +1,25 @@
+
+This directory contains images for Andhra Pradesh tourism website:
+
+1. tirumala.jpg - Tirumala Temple
+2. srisailam.jpg - Srisailam Temple
+3. kanaka.jpg - Kanaka Durga Temple
+4. gunadala.jpg - Gunadala Church
+5. holytrinity.jpg - Holy Trinity Church (Bheemunipatnam)
+6. ameen.jpg - Ameen Peer Dargah
+7. barah.jpg - Barah Shaheed Dargah
+8. araku.jpg - Araku Valley
+9. lambasingi.jpg - Lambasingi
+10. gandikota.jpg - Gandikota
+11. caves.jpg - Belum Caves
+12. kakinada.jpg - Kakinada Beach
+13. vijayawada.jpg - Vijayawada
+14. vizag.jpg - Visakhapatnam
+15. landscape.jpg - General Andhra Pradesh landscape
+
+Additional images:
+- person1.jpg - Testimonial person 1
+- person2.jpg - Testimonial person 2
+- person3.jpg - Testimonial person 3
+
+Please replace these placeholder images with actual images of the locations for the production website.
